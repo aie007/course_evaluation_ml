@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+// import Header from './components/Header'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import SignIn from './pages/Signin'
+import Courses from './pages/Courses'
+import { BrowserRouter } from "react-router-dom"; 
+import Navbar2 from './components/Header/Navbar2';
 
 function App() {
 
@@ -17,15 +25,25 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-        {(typeof data.members === "undefined") ? (
-                <p>Loading....</p>
-        ) : (
-          data.members.map((member, i) => (
-              <p key={i}>{member}</p>
-          ))
-        )}
-    </div>
+      <BrowserRouter>
+      <Navbar2 />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/courses" element={<Courses />} />
+      </Routes>
+    
+      <div>
+          {(typeof data.members === "undefined") ? (
+                  <p>Loading....</p>
+          ) : (
+            data.members.map((member, i) => (
+                <p key={i}>{member}</p>
+            ))
+          )}
+      </div>
+      </BrowserRouter>
   );
 }
 
