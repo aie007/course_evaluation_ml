@@ -48,16 +48,23 @@ body {
 .content {
   background-color: black;
   /* display: flex; */
-  margin: 50px auto;
+  margin: 40px auto;
   position:relative;
-  max-width: 1100px;
+  /* max-width: 1100px; */
+  max-width: calc(100% - 200px);
   text-align: center;
   justify-content: center;
-  min-height: 300px;
   padding: 3%;
   color: white;
   border-radius: 30px;
   border: white;
   border-style: solid;
   border-width: 1px;
+}
+
+#homeLogo {
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: auto;
 }
