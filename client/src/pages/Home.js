@@ -2,11 +2,15 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import front_img from '../components/Images/front_img.jpg';
 import third_img from '../components/Images/third_img.jpg';
-import blackboard from '../components/Images/blackboard.jpg';
+import logo from '../components/Images/Logo.jpg';
 
 function Home() {
   return (
-    <center><Carousel>
+    <div>
+      <div className='content'>
+        <img src={ logo } ></img>
+      </div>
+    {/* <center><Carousel>
     <Carousel.Item interval={1000}>
       <img src="https://cdn.pixabay.com/photo/2013/07/12/17/46/chalkboard-152414_640.png" height="800px" width="100%" alt=""/>
       <Carousel.Caption>
@@ -30,6 +34,7 @@ function Home() {
         </p>
       </Carousel.Caption>
     </Carousel.Item>
-  </Carousel></center>
+  </Carousel></center> */}
+  </div>
 )}
 export default Home

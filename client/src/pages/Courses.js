@@ -17,7 +17,8 @@ function Courses() {
 
 
   return (
-    <div>
+    <div className='content'>
+      <br/>
       <h1>Courses</h1>
       {/* <select onChange={(e) => setCollege(e.target.value)} defaultValue="Select an institute"> */}
         <select>

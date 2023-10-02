@@ -16,7 +16,7 @@
   
   /* navbar */
   .navbar {
-    background-color: aliceblue;
+    background-color: black;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -45,6 +45,19 @@
     gap: 60px;
   }
   
+  .navLink {
+    color: white;
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+  }
+
+  :hover.navLink {
+    text-decoration: none;
+    color: yellow;
+    font-weight: 100;
+  }
+
   /* media queries */
   
   @media screen and (max-width: 780px){
@@ -56,7 +69,7 @@
     }
   
     .bar {
-          background-color: #120f0b;
+          background-color: white;
           width: 20px;
           height: 3px;
           display: block;
@@ -88,8 +101,9 @@
       text-align: start;
       width: 100%;
       transition: 0.7s ease-in-out;
-      background-color: aliceblue;
+      background-color: black;
       padding: 10px;
+      color: white;
     }
   
     .navMenu.active{

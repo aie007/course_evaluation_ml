@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import About from './pages/About'
-import SignIn from './pages/Signin'
+import Contact from './pages/Contact'
+import Review from './pages/Review'
+import Admin from './pages/Admin';
 import Courses from './pages/Courses'
 import { BrowserRouter } from "react-router-dom"; 
 import Navbar2 from './components/Header/Navbar2';
@@ -28,12 +29,12 @@ function App() {
       <Navbar2 />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/signin" element={<SignIn />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
-    
-      <div>
+      <div className='content'>
           {(typeof data.members === "undefined") ? (
                   <p>Loading....</p>
           ) : (

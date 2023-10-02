@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function SignIn() {
+function Review() {
   const [data, setData] = useState([{}])
 
   useEffect(() => {
@@ -15,8 +15,8 @@ function SignIn() {
   }, [])
 
   return (
-    <div> 
-      <h1>Sign In</h1><br/>
+    <div className='content'> 
+      <h1>Sign In</h1>
       <form action='/signin' method="POST">
         <select name='institute'>
           <option selected="true" disabled='true'>Select your college</option>
@@ -35,4 +35,4 @@ function SignIn() {
     </div>
   )
 }
-export default SignIn
+export default Review
