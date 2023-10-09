@@ -8,19 +8,19 @@ function Courses() {
   const [haveDetails, setHaveDetails] = useState(false)
   const [details, setDetails] = useState([{}])
 
-  async function getCourse() {
-    console.log(course)
-    console.log(college)
-    await fetch('./courses?course='+course+'&institute='+college).then(
-      res => res.json()
-    ).then(
-      data => {
-        setHaveDetails(true)
-        setDetails(data)
-        console.log(data)
-      }
-    )
-  }
+  // async function getCourse() {
+  //   console.log(course)
+  //   console.log(college)
+  //   await fetch('./courses?course='+course+'&institute='+college).then(
+  //     res => res.json()
+  //   ).then(
+  //     data => {
+  //       setHaveDetails(true)
+  //       setDetails(data)
+  //       console.log(data)
+  //     }
+  //   )
+  // }
 
   useEffect(() => {
     fetch('./courses').then(
@@ -59,7 +59,7 @@ function Courses() {
             )) 
           )}
       </select>
-      <button onClick={getCourse()}>View</button>
+      {/* <button onClick={getCourse()}>View</button> */}
       {/* <p>your course is {details}</p> */}
     </div>
   )

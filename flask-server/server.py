@@ -1,7 +1,9 @@
 from flask import Flask, request
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
+from pathlib import Path
 
-# load_dotenv(".env")
+basepath = Path()
+load_dotenv(basepath.cwd())
 
 app = Flask(__name__)
 
@@ -11,14 +13,14 @@ def members():
 
 @app.route("/courses")
 def courses():
-    req = request.get_json()
-    print(req)
-    if req == None:
-        return {"institutes": [
-        {"name": "Acropolis", "courses": ["Course1", "Course2", "Course3"]},
-        {"name": "dtu", "courses": ["Course199", "Course42", "Course433"]},
-        {"name": "dsce", "courses": ["Course23", "Course22", "Course223"]},
-        {"name": "sgsits", "courses": ["Course94", "Course752", "Course353"]}
+    # req = request.get_json()
+    # print(req)
+    # if req == None:
+    return {"institutes": [
+    {"name": "Acropolis", "courses": ["Course1", "Course2", "Course3"]},
+    {"name": "dtu", "courses": ["Course199", "Course42", "Course433"]},
+    {"name": "dsce", "courses": ["Course23", "Course22", "Course223"]},
+    {"name": "sgsits", "courses": ["Course94", "Course752", "Course353"]}
     ]}
 
 @app.route("/review", methods=['GET', 'POST'])
