@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import Dashboard from '../components/Dashboard';
+// import axios from 'axios';
+// import { Tableau } from '../components/Dashboard';
 
 function Courses() {
   const [courses, setCourses] = useState([{}])
@@ -59,6 +61,8 @@ function Courses() {
             )) 
           )}
       </select>
+      {/* <Tableau/> */}
+      <Dashboard/>
       {/* <button onClick={getCourse()}>View</button> */}
       {/* <p>your course is {details}</p> */}
     </div>
