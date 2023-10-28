@@ -41,7 +41,7 @@ function Courses() {
   return (
     <div className='content'>
       <h1>Courses</h1>
-      <select id="institute" name='institute' onChange={(e) => setCollege(e.target.value)} value={ college }>
+      {/* <select id="institute" name='institute' onChange={(e) => setCollege(e.target.value)} value={ college }>
         <option disabled='true' selected="true">Select college</option>
         {(typeof courses.institutes === "undefined") ? (
           <option disabled='true'>Loading...</option>
@@ -60,12 +60,13 @@ function Courses() {
               <option key={ i } value={ course }>{ course }</option>
             )) 
           )}
-      </select>
+      </select> */}
       {/* <Tableau/> */}
       <Dashboard/>
       {/* <button onClick={getCourse()}>View</button> */}
       {/* <p>your course is {details}</p> */}
     </div>
+    // <Dashboard/>
   )
 }
 export default Courses

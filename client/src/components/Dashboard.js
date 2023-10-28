@@ -22,7 +22,7 @@ class Dashboard extends Component {
         // if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1709px';vizElement.style.height='931px';} 
         // else if ( divElement.offsetWidth > 500 ) {
             vizElement.style.position = 'relative';
-             vizElement.style.width='990px';
+             vizElement.style.width='100%';
              vizElement.style.height='835px';
             // } 
         // else { vizElement.style.width='100%';vizElement.style.height='2027px';}                     
