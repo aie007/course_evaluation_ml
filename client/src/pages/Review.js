@@ -44,7 +44,7 @@ function Review() {
 
   return (
     <div className='content'> 
-      <h1>Write a Review</h1>
+      <h1 className='page-heading'>Write a Review</h1>
       <p>We value your words. Word your opinions about those courses you took this semester to make a change. All reviews are kept anonymous (and once submitted, cannot be deleted as of now). Your email address will be recorded for verification purposes only.</p>
       <form>
         <label htmlFor='institute'>Institution</label>
