@@ -44,28 +44,37 @@ function Review() {
 
   return (
     <div className='content'> 
-      <h1 className='page-heading'>Write a Review</h1>
+      <h1 className='page-heading centered'>Write a Review</h1>
       <p>We value your words. Word your opinions about those courses you took this semester to make a change. All reviews are kept anonymous (and once submitted, cannot be deleted as of now). Your email address will be recorded for verification purposes only.</p>
-      <form>
-        <label htmlFor='institute'>Institution</label>
-        <select id='institute' name='institute' className='studentDetails' onChange={(e) => setCollege(e.target.value)}>
-          <option selected="true" disabled='true'>Select your college</option>
-          {(typeof data.institutions === "undefined") ? (
-            <option disabled='true'>Loading...</option>
-          ) : (
-            data.institutions.map((institution, i) => (
-            <option key={institution.name} value={institution.name}>{institution.name}</option>
-            ))
-          )}
-        </select><br/>
-        <label htmlFor='email'>Email ID (issued by your institute)</label>
-        <input id='email' name='email' type='email' className='studentDetails' placeholder='johndoe@institute.edu' onChange={(e) => setEmail(e.target.value)}/><br/>
-        <label htmlFor='otp'>OTP (sent on your email)</label>
-        <input id='otp' name='otp' type='password' className='studentDetails' placeholder='6-digit PIN'/><br/>
-        <button type='button' id='verifyBtn' onClick={() => checkOTP()}>Verify OTP</button><br/>
-        <input id='namea' name='name' type='text' className='reviewDetails' defaultValue='nothing' readOnly={isReadOnly} />
-        <button type='submit'>Submit</button>
-      </form>
+      <div className='form-div'>
+        <form>
+          <label htmlFor='institute'>
+            <span className="label-title">Institution</span>
+            <select id='institute' name='institute' className='studentDetails' onChange={(e) => setCollege(e.target.value)}>
+              <option selected="true" disabled='true'>Select your college</option>
+              {(typeof data.institutions === "undefined") ? (
+                <option disabled='true'>Loading...</option>
+              ) : (
+                data.institutions.map((institution, i) => (
+                <option key={institution.name} value={institution.name}>{institution.name}</option>
+                ))
+              )}
+            </select>
+          </label>
+          <label htmlFor='email'>
+            <span className="label-title">Email ID </span>
+            <input id='email' name='email' type='email' className='studentDetails' placeholder='johndoe@institute.edu' onChange={(e) => setEmail(e.target.value)}/>
+            {/* <span className='add-info'>(issued by your institute)</span> */}
+          </label>
+          <label htmlFor='otp'>
+            <span className="label-title">OTP</span>
+            <input id='otp' name='otp' type='password' className='studentDetails' placeholder='6-digit PIN'/>
+          </label>
+          <span><button type='button' id='verifyBtn' onClick={() => checkOTP()}>Verify OTP</button></span>
+          <label><span className="label-title">Review</span><input id='namea' name='name' type='text' className='reviewDetails' defaultValue='nothing' readOnly={isReadOnly} /> </label>
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
     </div>
   )
 }

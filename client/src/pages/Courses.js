@@ -40,7 +40,7 @@ function Courses() {
 
   return (
     <div className='content'>
-      <h1 className='page-heading'>Courses</h1>
+      <h1 className='page-heading centered'>Courses</h1>
       {/* <select id="institute" name='institute' onChange={(e) => setCollege(e.target.value)} value={ college }>
         <option disabled='true' selected="true">Select college</option>
         {(typeof courses.institutes === "undefined") ? (

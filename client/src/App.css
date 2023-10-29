@@ -85,7 +85,33 @@ body {
   margin: auto;
 }
 
+.form-div {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+label {
+  display: block;
+  position: relative;
+  padding: 3px 15px;
+  margin: 8px;
+}
+
+label .label-title {
+  font-weight: bold;
+  position: absolute;
+  left: 3px;
+}
+
+label input,
+label textarea,
+label select {
+  margin-left: 120px;
+  width: 80%;
+}
+
 input, select {
+  padding: 0px 15px;
   border: yellow dashed;
   justify-content: space-around;
   border-radius: 5%;
@@ -105,26 +131,19 @@ input:focus, select:focus {
   font-weight: bold;
 }
 
+.centered {
+  text-align: center;
+}
+
 .page-heading {
   color: yellow;
-  text-align: center;
   font-weight: bold;
 }
 
-.admin-tabs ul > li > a {
-  background-color: pink;
-  color: white;
-}
-
 .nav-tabs .nav-link {
-  /* background-color: transparent !important; */
   color: yellow !important;
-  /* border-top: none !important;
-  border-left: none !important;
-  border-right: none !important; */
 }
 
 .nav-tabs .nav-link.active {
-  /* border-bottom: solid 4px white !important; */
   color: white !important;
 }
