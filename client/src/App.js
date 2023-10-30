@@ -11,18 +11,18 @@ import Navbar2 from './components/Header/Navbar2';
 
 function App() {
 
-  const [data, setData] = useState([{}])
+  // const [data, setData] = useState([{}])
 
-  useEffect(() => {
-    fetch('./members').then(
-      res => res.json()
-    ).then(
-      data => {
-        setData(data)
-        console.log(data)
-      }
-    )
-  }, [])
+  // useEffect(() => {
+  //   fetch('./members').then(
+  //     res => res.json()
+  //   ).then(
+  //     data => {
+  //       setData(data)
+  //       console.log(data)
+  //     }
+  //   )
+  // }, [])
 
   return (
       <BrowserRouter>
@@ -34,7 +34,7 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
-      <div className='content'>
+      {/* <div className='content'>
           {(typeof data.members === "undefined") ? (
                   <p>Loading....</p>
           ) : (
@@ -42,7 +42,7 @@ function App() {
                 <p key={i}>{member}</p>
             ))
           )}
-      </div>
+      </div> */}
       </BrowserRouter>
   );
 }
