@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {Button} from './Admin'
 
 function Review() {
   const [data, setData] = useState([{}])
@@ -17,30 +18,30 @@ function Review() {
     )
   }, [])
 
-  function checkOTP() {
-    var otp = document.getElementById('otp');
-    if(otp && otp.value === '112115') {
-      alert('correct otp');
-      const studentDetails = document.getElementsByClassName('studentDetails');
-      for(let i = 0; i < studentDetails.length; i++)
-        studentDetails[i].setAttribute('readOnly', 'readOnly');
-      const instituteOptions = document.getElementById('institute').getElementsByTagName('option');
-      for(let i = 0; i < instituteOptions.length; i++) {
-        if(instituteOptions[i].value === college)
-          continue;
-        else {
-          instituteOptions[i].setAttribute('disabled', 'true');
-        }
-      }
-      setIsReadOnly(prevState => !prevState);
-      const verifyBtn = document.getElementById('verifyBtn');
-      verifyBtn.setAttribute('disabled', 'true');
-      verifyBtn.style.color = 'white';
-      console.log(data)
-    }
-    else
-      alert('wrong otp');
-  }
+  // function checkOTP() {
+  //   var otp = document.getElementById('otp');
+  //   if(otp && otp.value === '112115') {
+  //     alert('correct otp');
+  //     const studentDetails = document.getElementsByClassName('studentDetails');
+  //     for(let i = 0; i < studentDetails.length; i++)
+  //       studentDetails[i].setAttribute('readOnly', 'readOnly');
+  //     const instituteOptions = document.getElementById('institute').getElementsByTagName('option');
+  //     for(let i = 0; i < instituteOptions.length; i++) {
+  //       if(instituteOptions[i].value === college)
+  //         continue;
+  //       else {
+  //         instituteOptions[i].setAttribute('disabled', 'true');
+  //       }
+  //     }
+  //     setIsReadOnly(prevState => !prevState);
+  //     const verifyBtn = document.getElementById('verifyBtn');
+  //     verifyBtn.setAttribute('disabled', 'true');
+  //     verifyBtn.style.color = 'white';
+  //     console.log(data)
+  //   }
+  //   else
+  //     alert('wrong otp');
+  // }
 
   return (
     <div className='content'> 
@@ -64,14 +65,18 @@ function Review() {
           <label htmlFor='email'>
             <span className="label-title">Email ID </span>
             <input id='email' name='email' type='email' className='studentDetails' placeholder='johndoe@institute.edu' onChange={(e) => setEmail(e.target.value)}/>
-            {/* <span className='add-info'>(issued by your institute)</span> */}
+            <span className='add-info'>(issued by your institute)</span>
           </label>
-          <label htmlFor='otp'>
+           {/* <label htmlFor='otp'>
             <span className="label-title">OTP</span>
             <input id='otp' name='otp' type='password' className='studentDetails' placeholder='6-digit PIN'/>
-          </label>
-          <span><button type='button' id='verifyBtn' onClick={() => checkOTP()}>Verify OTP</button></span>
-          <label><span className="label-title">Review</span><input id='namea' name='name' type='text' className='reviewDetails' defaultValue='nothing' readOnly={isReadOnly} /> </label>
+          </label>  */}
+          {/* <span><button type='button' id='verifyBtn' onClick={() => checkOTP()}>Verify OTP</button></span> */}
+          
+          <br />
+          <label><span className="label-title">Review</span><textarea name="postContent" rows={4} cols={40}  placeholder='please provide review!!' />  </label>
+          <button type="reset">Reset </button>
+          &nbsp;
           <button type='submit'>Submit</button>
         </form>
       </div>

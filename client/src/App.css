@@ -78,26 +78,13 @@ body {
   font-size: medium;
 }
 
-.web-link{
-  color: white;
-  text-decoration: underline;
-}
-.web-link:hover{
-  color: yellow;
-}
-
 #homeLogo {
   height: 100%;
   max-width: 100%;
   display: block;
   margin: auto;
 }
-.center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-}
+
 .form-div {
   display: table;
   margin-right: auto;
@@ -113,13 +100,13 @@ label {
 label .label-title {
   font-weight: bold;
   position: absolute;
-  left: 3px;
+  left: 10px;
 }
 
 label input,
 label textarea,
 label select {
-  margin-left: 120px;
+  margin-left: 156px;
   width: 80%;
 }
 
@@ -140,7 +127,6 @@ input:focus, select:focus {
 }
 
 .p-heading {
-  text-align: center;
   color: yellow;
   font-weight: bold;
 }
