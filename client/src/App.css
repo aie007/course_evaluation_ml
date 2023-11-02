@@ -77,6 +77,19 @@ body {
   font-family: cursive;
   font-size: medium;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+#web-link{
+  color: white;
+}
+
+#web-link:hover{
+  color: yellow;
+}
 
 #homeLogo {
   height: 100%;
@@ -129,6 +142,7 @@ input:focus, select:focus {
 .p-heading {
   color: yellow;
   font-weight: bold;
+  text-align: center;
 }
 
 .centered {
@@ -146,4 +160,13 @@ input:focus, select:focus {
 
 .nav-tabs .nav-link.active {
   color: white !important;
+}
+
+.content-center{
+  text-align: center;
+}
+
+.container{  
+  text-align: center;   
+  height: 50px;  
 }

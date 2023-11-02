@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import {Button} from './Admin'
 
 function Review() {
   const [data, setData] = useState([{}])

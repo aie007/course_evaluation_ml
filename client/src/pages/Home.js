@@ -16,7 +16,7 @@ function Home() {
           With a rich history of academic excellence and a forward-thinking vision for the future, we are committed
           to pushing the boundaries of higher education. Our story is one of innovation, inclusivity, and a relentless 
           pursuit of excellence.
-          <br></br><br></br>
+          <br /><br />
           In today's dynamic landscape of higher education, our shared commitment is to enhance the quality of university classes and lectures. 
           To achieve this paramount objective,we recognize the need for a fresh approach to feedback evaluation We believe your insights are invaluable in
           shaping the future of our courses and lectures.
@@ -27,7 +27,7 @@ function Home() {
           ever felt bored and left out in the classroom? 
           Each response will play a crucial role in making our classes more engaging, inclusive, and tailored to your needs. 
           Your feedback is confidential and will be used solely for enhancing course delivery. Your honest responses are greatly
-          appreciated and your anonymity is guaranteed.<br></br>
+          appreciated and your anonymity is guaranteed.<br /><br />
           <img class="center" src={ flowdiag }></img>
         </p>
         <p>
@@ -35,12 +35,12 @@ function Home() {
         As we embrace the opportunities of the digital age, we've witnessed a significant shift from hard-copy evaluations
         to online feedback forms. While this transition is a step in the right direction, it is clear that more comprehensive
         solutions are needed to meet the diverse needs of all stakeholders within the education ecosystem.
-        <br></br><br></br>
+        <br /><br />
         At Coursefix, we are at the forefront of reimagining the feedback process. 
         We believe in fostering open and meaningful communication between students and instructors. Our approach 
         transcends the confines of traditional evaluation methods, embracing a more holistic, nuanced, and expressive 
         feedback system.
-        Please take a few minutes to share your thoughts with us by completing the review form <Link to='/review' className='web-link'>here</Link>. We encourage 
+        Please take a few minutes to share your thoughts with us by completing the review form <Link to='/review' id='web-link'>here</Link>. We encourage 
         you to express your thoughts in natural language. Providing a detailed and meaningful feedback helps us make 
         tangible improvements.
         </p>
@@ -50,7 +50,7 @@ function Home() {
         improvement is at the heart of every interaction.
 
         Discover the future of feedback at Coursefix. Together, we're shaping 
-        the educational experience of tomorrow.<br></br><br></br>
+        the educational experience of tomorrow.<br /><br />
         Thank you for your participation. Your contributions will augment the overall learning experience at our college.
         </p>   
       </div>
