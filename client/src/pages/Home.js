@@ -8,6 +8,7 @@ function Home() {
     <div>
       <div className='content'>
         <img id='homeLogo' src={ logo } alt='course fix is an enterprise solution'></img>
+        <center><Link to='/review' id='homelink'><h3 class="p-heading">Get started. Give your review here</h3></Link></center>
       </div>
       <div className='content'>
         <p>

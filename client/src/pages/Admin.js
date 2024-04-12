@@ -1,18 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import styled from 'styled-components';
-
-
-const Button = styled.button`
-background-color: white;
-color: black;
-font-size: 20px;
-padding: 10px 60px;
-border-radius: 5px;
-margin: 20px 500px;
-cursor: pointer;
-`;
+// import emailjs from '@emailjs/browser';
+// import EmailHeader from '../components/EmailHeader';
 
 function Admin() {
 
@@ -31,6 +21,7 @@ function Admin() {
   return (
     <div className='content'>
       <h1 className='page-heading centered'>Welcome back, Administrator!</h1>  
+      {/* <EmailHeader/> */}
       <Tabs
         defaultActiveKey="add-course"
         id="admin-tabs"
@@ -55,8 +46,9 @@ function Admin() {
                 <span className="label-title">Institution</span>
                 <input type='text' placeholder='like Example Institute of Technology'/>
               </label>
-              <br />
-              <Button onClick={addcours} > Add </Button>
+              <div class="container">
+                <button className='mybutton' onClick={addcours}> Add </button>
+              </div>
             </form>
           </div>
         </Tab>
@@ -64,26 +56,25 @@ function Admin() {
         <Tab eventKey="del-course" title="Delete Course">
         <div className='form-div'>
             <h3 className='p-heading centered'>Delete Course</h3>
-            <br />
             <form id='deleteCourse'>
               <label htmlFor='cname'>
                 <span className="label-title">Course Name</span>
                 <input type='text' placeholder='like Computer Networking'/>
               </label>
-              <br />
-               <Button onClick={dltCours} > Delete </Button>
+              <div class="container">
+                <button className='mybutton' onClick={dltCours}> Delete </button>
+              </div>
             </form>
           </div>
         </Tab>
 
         <Tab eventKey="add-instructor" title="Add Instructor">
-          <br />
           <div className='form-div'>
         <form id='addInstructor'>
         <h3 className='p-heading centered'>Add New Instructor</h3>
               <label htmlFor='cname'>
-                <span className="label-title">Name of Instructor</span>
-                <input type='text' placeholder='like Narendra Pal sir'/>
+                <span className="label-title">Name</span>
+                <input type='text' placeholder='like Albert Einstein'/>
               </label>
               <label htmlFor='cins'>
                 <span className="label-title">Institution</span>
@@ -91,10 +82,11 @@ function Admin() {
               </label>
               <label htmlFor='cqal'>
                 <span className="label-title">Qualification</span>
-                <input type='text' placeholder='like B-Tech/M-Tech'/>
+                <input type='text' placeholder='like PhD, ME, MTech, MPhil, MS, MSc'/>
               </label>
-              <br />
-              <Button onClick={addInstr} > Add </Button>
+              <div class="container">
+                <button className='mybutton' onClick={addInstr}> Add </button>
+              </div>
             </form>
             </div>
         </Tab>
@@ -102,14 +94,14 @@ function Admin() {
         <Tab eventKey="del-instructor" title="Delete Instructor">
         <div className='form-div'>
             <h3 className='p-heading centered'>Delete Instructor</h3>
-            <br />
             <form id='deleteCourse'>
               <label htmlFor='cname'>
-                <span className="label-title">Instructor's Name</span>
-                <input type='text' placeholder='like Computer Networking'/>
+                <span className="label-title">Instructor</span>
+                <input type='text' placeholder='Select a name'/>
               </label>
-              <br />
-               <Button onClick={dltInstr} > Delete </Button>
+              <div class="container">
+                <button className='mybutton' onClick={dltInstr}> Delete </button>
+              </div>
             </form>
           </div>
         
